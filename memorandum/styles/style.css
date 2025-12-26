@@ -1,0 +1,17 @@
+@charset "utf-8";
+*{ border: 1px dotted #000;}
+body {
+    background-color:#D8F9FF;
+    width:1200px;
+    margin: 0 auto;
+    text-align:center;
+    
+}
+.Taisetsu {
+    font-weight:bold;
+    color:red;
+}
+h1 ,h2, h3, p{
+    margin:0 auto;
+    margin-bottom:10px;
+}

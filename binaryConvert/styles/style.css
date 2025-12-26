@@ -1,0 +1,72 @@
+@charset "UTF-8";
+
+body {
+    background-color: #4cf570;
+    font-family: "M PLUS 1", 'Noto Sans JP', sans-serif;
+    font-size: 14px;
+    width: 375px;
+    margin: 0 auto;
+}
+.binaryTop {
+    width: 300px;
+    font-size: 24px;
+    border: 1px solid #000;
+    margin-bottom: 10px;
+    background-color: #fff;
+    text-align: center;
+    margin:0 auto;
+}
+
+/* .tenchange は「縦に並べるだけの箱」＝色も枠も付けない */
+
+.tenchange , .twoChange , .sixteenChange  {
+    padding: 0;
+    width:300px;
+    margin: 0 auto;
+    border: 1px solid
+}
+
+/* 各行：中央寄せで横並び */
+.tenchange p, .twoChange p , .sixteenChange p  {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 20px;
+    /* ラベル箱と input 箱の間を20px */
+    margin: 10px 0;
+}
+
+/* 「10進数を入れる」単体を箱にするため、文字をspanで包む */
+ .labelBox {
+    width: 150px;
+    /* 150pxくらい */
+    border: 1px solid #000;
+    background: #fff;
+    padding: 6px 8px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+/* input も単体で箱 */
+input {
+    width: 50px;
+    /* 50pxくらい */
+    border: 1px solid #000;
+    background: #fff;
+    padding: 6px 8px;
+    box-sizing: border-box;
+}
+
+
+.button {
+    width:50px;
+    height:30px;
+    line-height: 30px;
+    font-size:14px;
+    border:1px solid #000;
+    background-color:rgb(255, 255, 255,1);
+    text-align: center;
+    display: block;
+    margin:10px auto;
+    
+}

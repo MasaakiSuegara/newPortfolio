@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DotGothic16&family=M+PLUS+1:wght@100..900&family=Noto+Sans+JP:wght@100..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>テンプレート</title>
+</head>
+<body>
+    <main>
+        <div class="colorRandom">
+            <p class="colorEx">ランダムにカラー設定</p>
+            <div class="colorBox" id="colorBox"></div>
+            <button id="cButton" class="colorButton">スタート</button>
+            <p class="colorEx">カラーコード<br>RED・GREEN・BLUE</p>
+        </div>
+
+        <div class="rgb">
+            <p id="redBox" class="numberBox"></p>
+            <p id="greenBox" class="numberBox"></p>
+            <p id="blueBox" class="numberBox"></p>
+        </div>
+        <div class="pasteBlock">
+            <div class="rgbaBlock">
+                <p class="rgbaCode" id="rgbaCode">rgbaカラーコード</p>
+                <button class="rgbaPaste" id="rgbaPaste">コピー</button>
+            </div>
+            <div class="rgbBlock">
+                <p class="rgbCode" id="rgbCode">#(10→16の変換作る)(未実装)</p>
+                <button class="rgbPaste" id="rgbPaste">コピー</button>
+            </div>
+        </div>
+        
+        <div class="todayBlock">
+            <p class="todayColor">今日の気分(未実装)</p>
+            <p class="passion">
+                <select  name="passion" id="passion">
+                    <option value="普通">普通</option>
+                    <option value="良い">良い</option>
+                    <option value="沈む">沈む</option>
+                </select>
+            </p>
+        </div>
+        <p>メモ。気分の選択で色を暗色、ランダム、明るいに乱数のばらつきを制御できるようになりたい。</p>
+    </main>
+    
+    <script>
+        'use strict';
+
+    document.getElementById('cButton').onclick = function () {
+        console.log('カラーナンバー')
+
+        const redNum = Math.floor(Math.random() * 256);
+        console.log(redNum);
+        document.getElementById('redBox').textContent = redNum;
+
+        const greenNum = Math.floor(Math.random() * 256);
+        console.log(greenNum);
+        document.getElementById('greenBox').textContent = greenNum;
+
+        const blueNum = Math.floor(Math.random() * 256);
+        console.log(blueNum);
+        document.getElementById('blueBox').textContent = blueNum;
+
+        const rgba = `rgba(${redNum}, ${greenNum}, ${blueNum}, 1)`;
+        document.getElementById('colorBox').style.backgroundColor =rgba;
+        document.getElementById('rgbaCode').textContent = rgba
+    };
+    
+    document.getElementById('rgbaPaste').onclick = function() {
+        const rgbaPaste = document.getElementById('rgbaCode').textContent;
+        navigator.clipboard.writeText(rgbaPaste);
+    }
+    </script>
+
+</body>
+</html>

@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../common/reset.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com"><!-- NotoSansJapaneseとNotoSerifJapaneseのgooglefonts使用 -->
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100..900&family=Noto+Serif+JP:wght@200..900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles/style.css">
+    <title>進数の変換</title>
+</head>
+<body>
+    <main>
+        <p class="binaryTop">数字の変換ページ</p>
+            <div class="tenchange">
+                <p><span class="labelBox">10進数を入れる</span><input type="text" class="binaryNumber"></p>
+                <p><span class="labelBox">10→2進数に変換</span><input type="text" class="tenTwo"></p>
+                <p><span class="labelBox">10→16進数に変換</span><input type="text" class="tenSixteen"></p>
+            </div>
+            <button id="tenButton" class="button">変換</button>
+            <div class="twoChange">
+                <p><span class="labelBox">2進数をいれる</span><input type="text" class="binaryNumber" id="binaryNumber" name="binaryNumber"></p>
+                <p><span class="labelBox">2→10進数に変換</span><input type="text" class="tenTwo" id="TenTwo" name="TenTwo"></p>
+                <p><span class="labelBox">2→16進数に変換</span><input type="text" class="tenSixteen" id="tenSixteen" name="tenSixteen"></p>
+            </div>
+            <button id="twoButton" class="button">変換</button>
+            <div class="sixteenChange">
+                <p><span class="labelBox">16進数を入れる</span><input type="text" class="binaryNumber" id="binaryNumber" name="binaryNumber"></p>
+                <p><span class="labelBox">16→10進数に変換</span><input type="text" class="tenTwo" id="TenTwo" name="TenTwo"></p>
+                <p><span class="labelBox">16→2進数に変換</span><input type="text" class="tenSixteen" id="tenSixteen" name="tenSixteen"></p>
+            </div>
+            <button id="sixteenButton" class="button">変換</button>
+
+    </main>
+    <script>
+        'use strict';
+
+    </script>
+
+</body>
+</html>
